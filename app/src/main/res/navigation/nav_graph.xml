@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tabReviewFragment">
+
+    <fragment
+        android:id="@+id/tabReviewFragment"
+        android:name="com.bm2cy.dainty2.view.TabReviewActivity"
+        android:label="tabReview_fragment"
+        tools:layout="@layout/activity_tab_review" >
+        <action
+            android:id="@+id/action_tabReviewFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.bm2cy.dainty2.view.WebActivity"
+        android:label="web_fragment"
+        tools:layout="@layout/activity_web" >
+        <argument
+            android:name="tab_position"
+            app:argType="integer" />
+        <argument
+            android:name="tab_type"
+            app:argType="integer" />
+    </fragment>
+</navigation>
